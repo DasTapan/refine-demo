@@ -5,6 +5,7 @@ export const authProviderServer: Pick<AuthBindings, "check"> = {
   check: async () => {
     const cookieStore = cookies();
     const auth = cookieStore.get("auth");
+    console.log(auth);
 
     if (auth) {
       return {
